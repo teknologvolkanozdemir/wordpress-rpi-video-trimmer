@@ -182,7 +182,6 @@ final class RPI_Video_Trimmer
         $attachment = array(
             'post_mime_type' => $filetype['type'] ? $filetype['type'] : $post->post_mime_type,
             'post_title' => sprintf(
-                /* translators: %s: original title */
                 __('%s (trimmed)', 'rpi-video-trimmer'),
                 $post->post_title
             ),
@@ -206,7 +205,6 @@ final class RPI_Video_Trimmer
         wp_send_json_success(array(
             'id' => $new_id,
             'message' => sprintf(
-                /* translators: %d: attachment ID */
                 __('Trimming finished. A new video was added to the Media Library with ID %d.', 'rpi-video-trimmer'),
                 $new_id
             ),
